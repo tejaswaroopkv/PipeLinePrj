@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                parallel {
+                parallel 
+                (
                     hw: {
                             bat 'javac HelloWorld.java'
                             bat 'java HelloWorld'
@@ -12,7 +13,8 @@ pipeline {
                             bat 'javac HelloWorld.java'
                             bat 'java HelloWorld'
                         }
-                   } // end of block parallel
+                   
+                ) // end of block parallel
                } // end of block steps
            } // end of block stage
        } // end of block stages
