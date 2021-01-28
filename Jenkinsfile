@@ -11,7 +11,7 @@ pipeline {
                     hw1: {
                             bat 'javac HelloWorld.java'
                             bat 'java HelloWorld'
-                        },
+                        }
                    } // end of block parallel
                } // end of block steps
            } // end of block stage
