@@ -1,5 +1,10 @@
 pipeline {
     agent any 
+        parameters {
+            string(name:  'Environment', defaultValue:  'PROD')
+    }'
+
+
     stages {
         stage('build') {
             steps {
@@ -16,4 +21,10 @@ pipeline {
                } // end of block steps
            } // end of block stage
        } // end of block stages
+    post {
+    always {
+        build 'example'
+    }
+}
+
     } // end of block pipeline
