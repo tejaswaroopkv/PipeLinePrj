@@ -22,7 +22,7 @@ pipeline {
            } // end of block stage
         stage('ParamUsage') {
             steps {
-                echo ${params.Environment}
+                echo '${params.Environment}'
                 echo env.path
             }
         }
