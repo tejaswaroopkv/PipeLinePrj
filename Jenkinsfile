@@ -19,7 +19,7 @@ pipeline {
                         }
                 ) // end of block parallel
                } // end of block steps
-           } // end of block stage
+           }, // end of block stage
         stage('ParamUsage') {
             echo env.Environment
             echo env.path
