@@ -7,6 +7,7 @@ pipeline {
          description: 'isBar should be true',
          name: 'isBar'
        )
+       ]
     }
 
 
