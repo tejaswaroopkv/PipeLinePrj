@@ -1,20 +1,13 @@
 pipeline {
     agent any 
-    options([
-        parameters {[
-                     string(
-                            name:  'Environment', 
-                            defaultValue:  'PROD') ,
-                     booleanParam(
-                                 defaultValue: true,
-                                 description: 'isBar should be true',
-                                 name: 'isBar'
-                                )
-                    ]}
-            ])
+        parameters {
+                     string(name:  'Environment', defaultValue:  'PROD') ,
+                     booleanParam(defaultValue: true,description: 'isBar should be true',name: 'isBar')
+                   }
         
-      stages {
-        stage('build') {
+        
+         stages {
+            stage('build') {
             steps {
                 parallel (
                     hw: {
@@ -28,7 +21,7 @@ pipeline {
                 ) // end of block parallel
                } // end of block steps
            } // end of block stage
-        stage('ParamUsage') {
+           stage('ParamUsage') {
             steps {
                 echo "DEBUG: parameter Environment =  ${params.Environment}"
                 echo 'DEBUG: parameter Environment =' + params.Environment
@@ -39,8 +32,7 @@ pipeline {
        } // end of block stages
     post {
     always {
-        build 'example'
+            build 'example'
+        }
     }
-}
-
-    } // end of block pipeline
+} // end of block pipeline
