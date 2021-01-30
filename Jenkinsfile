@@ -1,17 +1,19 @@
 pipeline {
     agent any 
+    properties([
         parameters {[
-            string(name:  'Environment', defaultValue:  'PROD') ,
-             booleanParam(
-         defaultValue: true,
-         description: 'isBar should be true',
-         name: 'isBar'
-       )
-       ]
-    }
-
-
-    stages {
+                     string(
+                            name:  'Environment', 
+                            defaultValue:  'PROD') ,
+                     booleanParam(
+                                 defaultValue: true,
+                                 description: 'isBar should be true',
+                                 name: 'isBar'
+                                )
+                    ]}
+            )]
+        
+      stages {
         stage('build') {
             steps {
                 parallel (
