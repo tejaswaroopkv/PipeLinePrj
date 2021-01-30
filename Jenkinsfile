@@ -1,7 +1,7 @@
 pipeline {
     agent any 
         parameters {[
-                     string(name:  'Environment', defaultValue:  'PROD') 
+                     string(name:  'Environment', defaultValue:  'PROD') ,
                      booleanParam(defaultValue: true,description: 'isBar should be true',name: 'isBar')
                    }]
         
