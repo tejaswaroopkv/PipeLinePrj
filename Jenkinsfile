@@ -1,7 +1,7 @@
 pipeline {
     agent any 
         parameters {
-            string(name:  'Environment', defaultValue:  'PROD') s1
+            string(name:  'Environment', defaultValue:  'PROD') 
     }
 
 
@@ -22,7 +22,7 @@ pipeline {
            } // end of block stage
         stage('ParamUsage') {
             steps {
-                echo s1
+                echo ${params.Environment}
                 echo env.path
             }
         }
