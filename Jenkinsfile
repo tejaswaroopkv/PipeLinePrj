@@ -2,7 +2,7 @@ pipeline {
     agent any 
         parameters {
             string(name:  'Environment', defaultValue:  'PROD')
-    }'
+    }
 
 
     stages {
