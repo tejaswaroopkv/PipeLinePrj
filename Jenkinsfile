@@ -11,7 +11,7 @@ pipeline {
                                  name: 'isBar'
                                 )
                     ]}
-            )]
+            ])
         
       stages {
         stage('build') {
