@@ -22,7 +22,7 @@ pipeline {
            } // end of block stage
         stage('ParamUsage') {
             steps {
-                echo "DEBUG: parameter Environment = + ${params.Environment}"
+                echo "DEBUG: parameter Environment =  ${params.Environment}"
                 echo 'DEBUG: parameter Environment =' + params.Environment
                 echo env.path
             }
