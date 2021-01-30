@@ -1,7 +1,12 @@
 pipeline {
     agent any 
-        parameters {
-            string(name:  'Environment', defaultValue:  'PROD') 
+        parameters {[
+            string(name:  'Environment', defaultValue:  'PROD') ,
+             booleanParam(
+         defaultValue: true,
+         description: 'isBar should be true',
+         name: 'isBar'
+       )
     }
 
 
@@ -24,6 +29,7 @@ pipeline {
             steps {
                 echo "DEBUG: parameter Environment =  ${params.Environment}"
                 echo 'DEBUG: parameter Environment =' + params.Environment
+                 print 'DEBUG: parameter isFoo = ' + params.isFoo
                 echo env.path
             }
         }
