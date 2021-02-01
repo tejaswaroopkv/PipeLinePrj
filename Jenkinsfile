@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 pipeline {
     agent any 
-        triggers {
-         cron('H */4 * * 1-5')
-        }
+        //triggers {
+         //cron('H */4 * * 1-5')
+        //}
 
         parameters {
                      string(defaultValue:  'PROD' , description: 'Environment should be true',name:  'Environment') 
