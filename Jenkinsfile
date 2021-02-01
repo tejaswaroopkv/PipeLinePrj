@@ -31,6 +31,7 @@ pipeline {
                 echo "DEBUG: parameter Environment =  ${params.Environment}"
                 echo 'DEBUG: parameter Environment =' + params.Environment
                  print 'DEBUG: parameter isFoo = ' + params.isBar
+                print "DEBUG: parameter isFoo =  + ${params.isBar}"
                 echo env.path
             }
         }
